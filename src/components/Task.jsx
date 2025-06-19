@@ -5,9 +5,9 @@ export default function Task({id, title, completed, onToggle}){
                 {title}
             </span>
 
-            <button className={`px-3 py-1 rounded ${completed ? "bg-green-200":"bg-blue-200"}`}>
+            <button className={`px-3 py-1 rounded ${completed ? "bg-green-200":"bg-blue-200"}`}onClick={()=> onToggle(id)}>
                 {completed ? "Undo":"Done"}
             </button>
         </div>
-    )
+    );
 }
